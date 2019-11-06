@@ -12,11 +12,14 @@ public class Student {
     private String phoneNum;
     private String weChatNum;
     private String QQNum;
+    private int position;
+    private int dateLimit;
+    private int timeLimit;
 
     public Student() {
     }
 
-    public Student(Integer studentId, String name, String password, String section, String phoneNum, String weChatNum, String QQNum) {
+    public Student(Integer studentId, String name, String password, String section, String phoneNum, String weChatNum, String QQNum, int position) {
         this.studentId = studentId;
         this.name = name;
         this.password = password;
@@ -24,6 +27,7 @@ public class Student {
         this.phoneNum = phoneNum;
         this.weChatNum = weChatNum;
         this.QQNum = QQNum;
+        this.position = position;
     }
 
     public Integer getStudentId() {
@@ -82,6 +86,29 @@ public class Student {
         this.QQNum = QQNum;
     }
 
+    public int getPosition() {
+        return position;
+    }
+
+    public void setPosition(int position) {
+        this.position = position;
+    }
+
+    public int getDataLimit() {
+        if (position == 1){
+            dateLimit = 14;
+        }else if (position == 2){
+            dateLimit = 2;
+        }else {
+            dateLimit = 365;
+        }
+        return dateLimit;
+    }
+
+    public int getTimeLimit() {
+        return 6;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -92,6 +119,7 @@ public class Student {
                 ", phoneNum='" + phoneNum + '\'' +
                 ", weChatNum='" + weChatNum + '\'' +
                 ", QQNum='" + QQNum + '\'' +
+                ", position=" + position +
                 '}';
     }
 }

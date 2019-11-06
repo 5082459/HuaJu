@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -58,13 +57,17 @@ public class UserController {
      * @param endTime 结束时间 String
      * @param theme 主题 String
      * @param activityContent 活动内容 String
-     * @return  code: 0 提交失败 1 提交成功 int
+     * @return  code: 0 提交失败 -1 不能预订 1 提交成功 int
      */
     @RequestMapping("/submitOrder")
     @ResponseBody
     public Map<String,Integer> submitOrder(String startTime,String endTime,String theme,String activityContent,HttpSession session){
         Map<String,Integer> returnMap = new HashMap<>();
         student = (Student) session.getAttribute("loginUser");
+        if (!userService.inRight(student,startTime,endTime)){
+            returnMap.put("code",-1);
+            return returnMap;
+        }
         System.out.println(student);
         order.setStudentId(student.getStudentId());
         order.setStartTime(startTime);

@@ -67,4 +67,9 @@ public class UserServiceImp implements UserService {
         return 1;
     }
 
+    @Override
+    public boolean inRight(Student student, String startTime, String endTime) {
+        return DateTool.canOrder(student.getDataLimit(),student.getTimeLimit(),startTime,endTime);
+    }
+
 }

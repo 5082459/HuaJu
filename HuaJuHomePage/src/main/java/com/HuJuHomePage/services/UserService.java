@@ -17,4 +17,6 @@ public interface UserService {
     Page findAllRecord(Integer pageNum, Integer pageSize);
 
     Integer cancelOrder(Integer orderId, String startTime);
+
+    boolean inRight(Student student, String startTime, String endTime);
 }
