@@ -52,29 +52,8 @@ public class UserController {
     }
 
     /**
-     * 登录功能
-     * HuaJu/orderPage/login
-     * @param name 姓名 String
-     * @param password 密码 String
-     * @return code : 0 登录失败，1 登录成功
-     */
-    @RequestMapping("/login")
-    @ResponseBody
-    public Map<String,Integer> login(String name, String password, HttpSession session){
-        Map<String,Integer> returnMap = new HashMap<>();
-//        System.out.println(name + "============" + password);
-        student = userService.login(name,password);
-        returnMap.put("code",0);
-        if (student != null){
-            session.setAttribute("loginUser",student);
-            returnMap.put("code",1);
-        }
-        return returnMap;
-    }
-
-    /**
      * 提交预定
-     * HuaJu/orderPage/submitOrder
+     * http://localhost:8080/HuaJu/orderPage/submitOrder
      * @param startTime 开始时间 String
      * @param endTime 结束时间 String
      * @param theme 主题 String
@@ -100,7 +79,7 @@ public class UserController {
 
     /**
      * 我的预约
-     * HuaJu/orderPage/findRecordOfOne
+     * http://localhost:8080/HuaJu/orderPage/findRecordOfOne
      * @param pageNum 当前页数 int
      * @param pageSize 每一页显示数据 int
      * @return 返回一页的数据 List<Order>
@@ -114,7 +93,7 @@ public class UserController {
 
     /**
      * 查找所有预约
-     * HuaJu/orderPage/findAllRecord
+     * http://localhost:8080/HuaJu/orderPage/findAllRecord
      * @param pageNum pageNum 当前页数 int
      * @param pageSize 每一页显示数据 int
      * @return 返回一页的数据 List<Order>
@@ -127,8 +106,8 @@ public class UserController {
 
     /**
      * 取消预约
-     * HuaJu/orderPage/cancelOrder
-     * @param orderId 预约Id String
+     * @param orderId 预约id String
+     * @param startTime 预约时间 String
      * @return code: 0 取消失败 1 取消成功 int
      */
     @RequestMapping("/cancelOrder")

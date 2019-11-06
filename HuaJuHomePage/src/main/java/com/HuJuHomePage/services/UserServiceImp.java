@@ -1,6 +1,6 @@
 package com.HuJuHomePage.services;
 
-import com.HuJuHomePage.Utilities.DataTool;
+import com.HuJuHomePage.Utilities.DateTool;
 import com.HuJuHomePage.mappers.UserMapper;
 import com.HuJuHomePage.models.Order;
 import com.HuJuHomePage.models.Page;
@@ -8,8 +8,6 @@ import com.HuJuHomePage.models.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.Date;
 
 @Service
 @Transactional //声明事务
@@ -62,7 +60,7 @@ public class UserServiceImp implements UserService {
 
     @Override
     public Integer cancelOrder(Integer orderId, String startTime) {
-        if (DataTool.outData(startTime)){
+        if (DateTool.isOutDate(startTime)){
             return -1;
         }
         userMapper.deleteOrder(orderId);
