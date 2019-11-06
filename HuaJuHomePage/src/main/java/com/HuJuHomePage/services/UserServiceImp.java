@@ -9,6 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
+import java.util.List;
+
 @Service
 @Transactional //声明事务
 public class UserServiceImp implements UserService {
@@ -61,7 +64,7 @@ public class UserServiceImp implements UserService {
     @Override
     public Integer cancelOrder(Integer orderId, String startTime) {
         if (DateTool.isOutDate(startTime)){
-            return -1;
+            return 0;
         }
         userMapper.deleteOrder(orderId);
         return 1;
@@ -70,6 +73,11 @@ public class UserServiceImp implements UserService {
     @Override
     public boolean inRight(Student student, String startTime, String endTime) {
         return DateTool.canOrder(student.getDataLimit(),student.getTimeLimit(),startTime,endTime);
+    }
+
+    @Override
+    public List<Order> findRecentOrder() {
+        return userMapper.RecentOrder(DateTool.getCurrentStr());
     }
 
 }

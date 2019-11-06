@@ -14,7 +14,7 @@ public class GlobalExceptionHandler {
     public Map<String,Integer> exceptionHandler(Exception ex){
         ex.printStackTrace();
         Map<String, Integer> map = new HashMap<>();
-        map.put("code", 0);
+        map.put("code", -1);
         return map;
     }
 }

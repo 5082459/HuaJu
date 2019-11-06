@@ -98,9 +98,9 @@ public class Student {
         if (position == 1){
             dateLimit = 14;
         }else if (position == 2){
-            dateLimit = 2;
-        }else {
             dateLimit = 365;
+        }else {
+            dateLimit = 2;
         }
         return dateLimit;
     }

@@ -31,4 +31,7 @@ public interface UserMapper {
 
     @Delete("delete from orders where orderId = #{0}")
     void deleteOrder(Integer orderId);
+
+    @Select("select * from orders where startTime >= #{0}")
+    List<Order> RecentOrder(String currentStr);
 }

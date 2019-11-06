@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -57,7 +58,7 @@ public class UserController {
      * @param endTime 结束时间 String
      * @param theme 主题 String
      * @param activityContent 活动内容 String
-     * @return  code: 0 提交失败 -1 不能预订 1 提交成功 int
+     * @return  code: -1 提交失败(系统异常) 0 不能预订 1 提交成功 int
      */
     @RequestMapping("/submitOrder")
     @ResponseBody
@@ -65,7 +66,7 @@ public class UserController {
         Map<String,Integer> returnMap = new HashMap<>();
         student = (Student) session.getAttribute("loginUser");
         if (!userService.inRight(student,startTime,endTime)){
-            returnMap.put("code",-1);
+            returnMap.put("code",0);
             return returnMap;
         }
         System.out.println(student);
@@ -81,11 +82,22 @@ public class UserController {
     }
 
     /**
+     * 最近预约
+     * http://localhost:8080/HuaJu/orderPage/findRecentOrder
+     * @return 预约单 List<Order>
+     */
+    @RequestMapping("/findRecentOrder")
+    @ResponseBody
+    public List<Order> submitOrder(){
+        return userService.findRecentOrder();
+    }
+
+    /**
      * 我的预约
      * http://localhost:8080/HuaJu/orderPage/findRecordOfOne
      * @param pageNum 当前页数 int
      * @param pageSize 每一页显示数据 int
-     * @return 返回一页的数据 List<Order>
+     * @return 返回一页的数据 Page 系统异常返回 code : -1
      */
     @RequestMapping("/findRecordOfOne")
     @ResponseBody
@@ -99,7 +111,7 @@ public class UserController {
      * http://localhost:8080/HuaJu/orderPage/findAllRecord
      * @param pageNum pageNum 当前页数 int
      * @param pageSize 每一页显示数据 int
-     * @return 返回一页的数据 List<Order>
+     * @return 返回一页的数据 Page 系统异常返回 code : -1
      */
     @RequestMapping("/findAllRecord")
     @ResponseBody
@@ -109,9 +121,10 @@ public class UserController {
 
     /**
      * 取消预约
+     * http://localhost:8080/HuaJu/orderPage/cancelOrder
      * @param orderId 预约id String
      * @param startTime 预约时间 String
-     * @return code: 0 取消失败 1 取消成功 int
+     * @return code: 0 过时不能取消 -1 取消失败（系统异常） 1 取消成功 int
      */
     @RequestMapping("/cancelOrder")
     @ResponseBody

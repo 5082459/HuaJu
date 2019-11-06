@@ -4,6 +4,8 @@ import com.HuJuHomePage.models.Order;
 import com.HuJuHomePage.models.Page;
 import com.HuJuHomePage.models.Student;
 
+import java.util.List;
+
 public interface UserService {
 
     void saveUser(String name, Integer age);
@@ -19,4 +21,7 @@ public interface UserService {
     Integer cancelOrder(Integer orderId, String startTime);
 
     boolean inRight(Student student, String startTime, String endTime);
+
+    List<Order> findRecentOrder();
+
 }
