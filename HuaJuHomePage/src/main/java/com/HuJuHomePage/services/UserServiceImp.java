@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Date;
 import java.util.List;
 
 @Service
@@ -78,6 +77,11 @@ public class UserServiceImp implements UserService {
     @Override
     public List<Order> findRecentOrder() {
         return userMapper.RecentOrder(DateTool.getCurrentStr());
+    }
+
+    @Override
+    public List<Order> isInConflict(String startTime, String endTime) {
+        return userMapper.selectInConflict(startTime,endTime);
     }
 
 }

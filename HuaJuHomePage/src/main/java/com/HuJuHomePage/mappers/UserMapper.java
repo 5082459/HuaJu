@@ -20,18 +20,29 @@ public interface UserMapper {
     @Select("select count(*) from orders where studentId=#{0}")
     int selectRowNum(Integer studentId);
 
-    @Select("select * from orders where studentId= #{2} ORDER BY orderId DESC LIMIT #{0},#{1}")
+    @Select("select * from orders where studentId= #{2} ORDER BY startTime DESC LIMIT #{0},#{1}")
     List<Order> selectRecordOfOne(int indexNum, int pageSize, Integer studentId);
 
     @Select("select count(*) from orders")
     int selectAllRowNum();
 
-    @Select("select * from orders ORDER BY orderId DESC LIMIT #{0},#{1}")
+    @Select("select * from orders ORDER BY startTime DESC LIMIT #{0},#{1}")
     List<Order> selectAllRecord(int indexNum, int pageSize);
 
     @Delete("delete from orders where orderId = #{0}")
     void deleteOrder(Integer orderId);
 
-    @Select("select * from orders where startTime >= #{0}")
+    @Select("select * from orders where startTime >= #{0} ORDER BY startTime DESC")
     List<Order> RecentOrder(String currentStr);
+
+    @Select("select * FROM orders \n" +
+            "WHERE startTime < #{0} AND endTime > #{0} \n" +
+            "OR startTime < #{1} AND endTime > #{1} \n" +
+            "OR startTime < #{0} AND endTime > #{1} \n" +
+            "OR startTime > #{0} AND endTime < #{1} \n" +
+            "OR startTime = #{0} AND endTime = #{1} \n" +
+            "OR startTime > #{0} AND startTime < #{1} \n" +
+            "OR endTime > #{0} AND endTime < #{1} \n" +
+            "ORDER BY startTime DESC; ")
+    List<Order> selectInConflict(String startTime, String endTime);
 }

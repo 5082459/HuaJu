@@ -58,15 +58,22 @@ public class UserController {
      * @param endTime 结束时间 String
      * @param theme 主题 String
      * @param activityContent 活动内容 String
-     * @return  code: -1 提交失败(系统异常) 0 不能预订 1 提交成功 int
+     * @return  code: -1 提交失败(系统异常) 0 不能预订 1 提交成功 2 预订冲突 int
+     *          预订冲突时同时返回冲突订单：key = orderList  value = 冲突订单集合 List
      */
     @RequestMapping("/submitOrder")
     @ResponseBody
-    public Map<String,Integer> submitOrder(String startTime,String endTime,String theme,String activityContent,HttpSession session){
-        Map<String,Integer> returnMap = new HashMap<>();
+    public Map<String,Object> submitOrder(String startTime,String endTime,String theme,String activityContent,HttpSession session){
+        Map<String,Object> returnMap = new HashMap<>();
         student = (Student) session.getAttribute("loginUser");
         if (!userService.inRight(student,startTime,endTime)){
             returnMap.put("code",0);
+            return returnMap;
+        }
+        List<Order> orderList = userService.isInConflict(startTime,endTime);
+        if (orderList != null && orderList.size() != 0){
+            returnMap.put("code",2);
+            returnMap.put("orderList",orderList);
             return returnMap;
         }
         System.out.println(student);
@@ -132,5 +139,16 @@ public class UserController {
         Map<String,Integer> returnMap = new HashMap<>();
         returnMap.put("code",userService.cancelOrder(orderId,startTime));
         return returnMap;
+    }
+
+    /**
+     * 获取登录用户对象
+     * http://localhost:8080/HuaJu/orderPage/getOnlineUser
+     * @return 登录用户对象 Student
+     */
+    @RequestMapping("/getOnlineUser")
+    @ResponseBody
+    public Student getOnlineUser(HttpSession session){
+        return (Student)session.getAttribute("loginUser");
     }
 }
