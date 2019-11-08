@@ -43,4 +43,14 @@ public class LoginController {
         }
         return returnMap;
     }
+    /**
+     * 获取登录用户对象
+     * http://localhost:8080/HuaJu/loginPage/getOpenId
+     * @return 登录用户对象 Student
+     */
+    @RequestMapping("/getOpenId")
+    @ResponseBody
+    public int getOpenId(){
+        return -1;
+    }
 }
