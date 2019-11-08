@@ -14,7 +14,7 @@ public interface UserMapper {
     @Select("select * from students where name = #{0} and password = #{1}")
     Student findStudent(String name, String password);
 
-    @Insert("insert into orders(studentId,startTime,endTime,theme,activityContent) values(#{studentId},#{startTime},#{endTime},#{theme},#{activityContent})")
+    @Insert("insert into orders(studentId,studentName,startTime,endTime,theme,activityContent) values(#{studentId},#{studentName},#{startTime},#{endTime},#{theme},#{activityContent})")
     void insertOrder(Order order);
 
     @Select("select count(*) from orders where studentId=#{0}")

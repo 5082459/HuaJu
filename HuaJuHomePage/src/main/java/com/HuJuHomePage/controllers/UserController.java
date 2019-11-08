@@ -78,6 +78,7 @@ public class UserController {
         }
         System.out.println(student);
         order.setStudentId(student.getStudentId());
+        order.setStudentName(student.getName());
         order.setStartTime(startTime);
         order.setEndTime(endTime);
         order.setTheme(theme);

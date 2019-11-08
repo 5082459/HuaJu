@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 public class Order {
     private int orderId;
     private int studentId;
+    private String  studentName;
     private String startTime;
     private String endTime;
     private String theme;
@@ -15,14 +16,23 @@ public class Order {
     public Order() {
     }
 
-    public Order(int orderId, int studentId, String startTime, String endTime, String theme, String activityContent, int cancelStage) {
+    public Order(int orderId, int studentId, String studentName, String startTime, String endTime, String theme, String activityContent, int cancelStage) {
         this.orderId = orderId;
         this.studentId = studentId;
+        this.studentName = studentName;
         this.startTime = startTime;
         this.endTime = endTime;
         this.theme = theme;
         this.activityContent = activityContent;
         this.cancelStage = cancelStage;
+    }
+
+    public String getStudentName() {
+        return studentName;
+    }
+
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
     }
 
     public int getOrderId() {
@@ -86,6 +96,7 @@ public class Order {
         return "Order{" +
                 "orderId=" + orderId +
                 ", studentId=" + studentId +
+                ", studentName='" + studentName + '\'' +
                 ", startTime='" + startTime + '\'' +
                 ", endTime='" + endTime + '\'' +
                 ", theme='" + theme + '\'' +
