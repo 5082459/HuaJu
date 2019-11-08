@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cf8b005a-e5c3-48ec-a762-7a8640976a12" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/接口文档.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/接口文档.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/接口文档.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/HuJuHomePage/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/HuJuHomePage/controllers/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/HuJuHomePage/mappers/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/HuJuHomePage/mappers/UserMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/HuJuHomePage/models/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/HuJuHomePage/models/Student.class" afterDir="false" />
@@ -73,7 +69,7 @@
     <session id="-1118955442">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.24" value="1" />
@@ -132,11 +128,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="59" column="43" lean-forward="true" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
+            <state relative-caret-position="326">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -193,12 +189,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/接口文档.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="611">
-                <caret line="214" selection-start-line="214" selection-end-line="214" selection-end-column="38" />
+              <first_editor relative-caret-position="533">
+                <caret line="209" column="1" lean-forward="true" selection-start-line="209" selection-start-column="1" selection-end-line="209" selection-end-column="1" />
               </first_editor>
               <second_editor />
             </state>
@@ -445,7 +441,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573112497763" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573227750720" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -540,7 +536,7 @@
       <workItem from="1573193822724" duration="398000" />
       <workItem from="1573195154044" duration="376000" />
       <workItem from="1573210695460" duration="2209000" />
-      <workItem from="1573227372209" duration="358000" />
+      <workItem from="1573227372209" duration="458000" />
     </task>
     <task id="LOCAL-00001" summary="110621">
       <created>1573045660207</created>
@@ -612,7 +608,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573214765240</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="110820">
+      <created>1573227761404</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1573227761405</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -648,7 +651,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56081000" />
+    <option name="totallyTimeSpent" value="56181000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -661,7 +664,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19029851" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -908,16 +910,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/接口文档.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="611">
-            <caret line="214" selection-start-line="214" selection-end-line="214" selection-end-column="38" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="638">
@@ -930,11 +922,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="59" column="43" lean-forward="true" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
+        <state relative-caret-position="326">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/接口文档.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="533">
+            <caret line="209" column="1" lean-forward="true" selection-start-line="209" selection-start-column="1" selection-end-line="209" selection-end-column="1" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
