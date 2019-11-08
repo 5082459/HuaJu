@@ -152,4 +152,20 @@ public class UserController {
     public Student getOnlineUser(HttpSession session){
         return (Student)session.getAttribute("loginUser");
     }
+
+    /**
+     * 获取登录用户对象
+     * http://localhost:8080/HuaJu/orderPage/getStudentById
+     * @param studentId  Integer
+     * @return 对象 Student 查询失败返回 studentId = -1,其他属性为null
+     */
+    @RequestMapping("/getStudentById")
+    @ResponseBody
+    public Student getStudentById(Integer studentId) throws Exception{
+        Student student = userService.findStudentBuId(studentId);
+        if (student == null){
+            student = new Student(-1);
+        }
+        return student;
+    }
 }

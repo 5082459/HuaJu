@@ -84,4 +84,10 @@ public class UserServiceImp implements UserService {
         return userMapper.selectInConflict(startTime,endTime);
     }
 
+    @Override
+    public Student findStudentBuId(Integer studentId) {
+
+        return userMapper.selectStudentById(studentId);
+    }
+
 }

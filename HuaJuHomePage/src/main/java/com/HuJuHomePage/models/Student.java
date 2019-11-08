@@ -30,6 +30,10 @@ public class Student {
         this.position = position;
     }
 
+    public Student(int studentId) {
+        this.studentId = studentId;
+    }
+
     public Integer getStudentId() {
         return studentId;
     }

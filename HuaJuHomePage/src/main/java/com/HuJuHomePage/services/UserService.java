@@ -25,4 +25,6 @@ public interface UserService {
     List<Order> findRecentOrder();
 
     List<Order> isInConflict(String startTime, String endTime);
+
+    Student findStudentBuId(Integer studentId);
 }

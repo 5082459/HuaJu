@@ -45,4 +45,7 @@ public interface UserMapper {
             "OR endTime > #{0} AND endTime < #{1} \n" +
             "ORDER BY startTime DESC; ")
     List<Order> selectInConflict(String startTime, String endTime);
+
+    @Select("select * from students where studentId = #{0}")
+    Student selectStudentById(Integer studentId);
 }
