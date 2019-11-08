@@ -53,4 +53,18 @@ public class LoginController {
     public int getOpenId(){
         return -1;
     }
+
+    /**
+     * 用户注销
+     * http://localhost:8080/HuaJu/loginPage/logout
+     * @return code = 1 注销成功，code = -1 系统异常
+     */
+    @RequestMapping("/logout")
+    @ResponseBody
+    public Map<String,Integer> logout(HttpSession session){
+        Map<String,Integer> map = new HashMap<>();
+        session.removeAttribute("loginUser");
+        map.put("code",1);
+        return map;
+    }
 }
