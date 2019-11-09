@@ -19,6 +19,8 @@ public interface UserMapper {
 
     @Select("select count(*) from orders where studentId=#{0}")
     int selectRowNum(Integer studentId);
+    @Select("select count(*) FROM orders WHERE startTime > #{0}")
+    int selectRecentRowNum(String currentStr);
 
     @Select("select * from orders where studentId= #{2} ORDER BY startTime DESC LIMIT #{0},#{1}")
     List<Order> selectRecordOfOne(int indexNum, int pageSize, Integer studentId);
@@ -32,8 +34,8 @@ public interface UserMapper {
     @Delete("delete from orders where orderId = #{0}")
     void deleteOrder(Integer orderId);
 
-    @Select("select * from orders where startTime >= #{0} ORDER BY startTime DESC")
-    List<Order> RecentOrder(String currentStr);
+    @Select("select * from orders where startTime >= #{0} ORDER BY startTime DESC LIMIT #{1},#{2}")
+    List<Order> selectRecentRecord(String currentStr, int indexNum, int pageSize);
 
     @Select("select * FROM orders \n" +
             "WHERE startTime < #{0} AND endTime > #{0} \n" +
@@ -48,4 +50,6 @@ public interface UserMapper {
 
     @Select("select * from students where studentId = #{0}")
     Student selectStudentById(Integer studentId);
+
+
 }

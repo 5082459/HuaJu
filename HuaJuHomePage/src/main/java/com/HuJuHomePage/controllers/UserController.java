@@ -90,15 +90,18 @@ public class UserController {
     }
 
     /**
-     * 最近预约
+     * 最近未过期预约
      * http://localhost:8080/HuaJu/orderPage/findRecentOrder
-     * @return 预约单 List<Order>
+     * @param pageNum 页数
+     * @param pageSize 每页显示数据
+     * @return 预约单 Page
      */
     @RequestMapping("/findRecentOrder")
     @ResponseBody
-    public List<Order> submitOrder(){
-        return userService.findRecentOrder();
+    public Page findRecentOrder(Integer pageNum,Integer pageSize){
+        return userService.findRecentOrder(pageNum,pageSize);
     }
+
 
     /**
      * 我的预约

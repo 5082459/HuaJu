@@ -75,8 +75,14 @@ public class UserServiceImp implements UserService {
     }
 
     @Override
-    public List<Order> findRecentOrder() {
-        return userMapper.RecentOrder(DateTool.getCurrentStr());
+    public Page findRecentOrder(Integer currentPage, Integer pageSize) {
+        int rows = userMapper.selectRecentRowNum(DateTool.getCurrentStr());
+        System.out.println("rows = " + rows);
+        page.setRows(rows);
+        page.setPageSize(pageSize);
+        page.setPageNum(currentPage);
+        page.setData(userMapper.selectRecentRecord(DateTool.getCurrentStr(),page.getIndexNum(),page.getPageSize()));
+        return page;
     }
 
     @Override

@@ -22,7 +22,7 @@ public interface UserService {
 
     boolean inRight(Student student, String startTime, String endTime);
 
-    List<Order> findRecentOrder();
+    Page findRecentOrder(Integer pageNum, Integer pageSize);
 
     List<Order> isInConflict(String startTime, String endTime);
 
