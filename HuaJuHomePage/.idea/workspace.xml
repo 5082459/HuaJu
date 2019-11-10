@@ -2,10 +2,60 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf8b005a-e5c3-48ec-a762-7a8640976a12" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery.serializejson.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/接口文档.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/models/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/models/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/models/Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/services/UserServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/services/UserServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/.idea/$CACHE_FILE$" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/.idea/HUAWEI reservation.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-reboot.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/css/reservationPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/reservationPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/image/QRCode.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/resources/image/QRCode.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/image/bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/resources/image/bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/image/headerbg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/resources/image/headerbg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/image/huawei.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/resources/image/huawei.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/image/loginbg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/resources/image/loginbg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/image/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/resources/image/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/image/programCode.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/resources/image/programCode.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/js/clean-blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/clean-blog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/js/jquery-3.3.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery-3.3.1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/js/laydate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/laydate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/js/layer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/layer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/js/theme/default/font/iconfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/theme/default/font/iconfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/js/theme/default/font/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/theme/default/font/iconfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/js/theme/default/font/iconfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/theme/default/font/iconfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/js/theme/default/font/iconfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/theme/default/font/iconfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/js/theme/default/icon-ext.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/theme/default/icon-ext.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/js/theme/default/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/theme/default/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/js/theme/default/laydate.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/theme/default/laydate.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/js/theme/default/layer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/theme/default/layer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/js/theme/default/loading-0.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/theme/default/loading-0.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/js/theme/default/loading-1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/theme/default/loading-1.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/js/theme/default/loading-2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/theme/default/loading-2.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webApp/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HuJuHomePage/controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/HuJuHomePage/controllers/LoginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/HuJuHomePage/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/HuJuHomePage/controllers/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/HuJuHomePage/mappers/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/HuJuHomePage/mappers/UserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/HuJuHomePage/models/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/HuJuHomePage/models/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HuJuHomePage/models/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/HuJuHomePage/models/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HuJuHomePage/models/Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/HuJuHomePage/models/Page.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/HuJuHomePage/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/HuJuHomePage/services/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/HuJuHomePage/services/UserServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/HuJuHomePage/services/UserServiceImp.class" afterDir="false" />
     </list>
@@ -69,47 +119,54 @@
     <session id="-1118955442">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.28" value="1" />
-          <entry key="project.open.time.32" value="1" />
+          <entry key="project.open.time.32" value="3" />
           <entry key="project.open.time.34" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="2" />
-          <entry key="java" value="23" />
-          <entry key="md" value="5" />
-          <entry key="properties" value="1" />
+          <entry key="html" value="5" />
+          <entry key="java" value="32" />
+          <entry key="md" value="9" />
+          <entry key="properties" value="2" />
           <entry key="svg" value="1" />
+          <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="2" />
-          <entry key="JAVA" value="23" />
-          <entry key="Markdown" value="5" />
-          <entry key="Properties" value="1" />
+          <entry key="HTML" value="5" />
+          <entry key="JAVA" value="32" />
+          <entry key="Markdown" value="9" />
+          <entry key="Properties" value="2" />
           <entry key="SVG" value="1" />
+          <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1733" />
-          <entry key="md" value="580" />
-          <entry key="txt" value="26" />
+          <entry key="java" value="1821" />
+          <entry key="md" value="599" />
+          <entry key="properties" value="15" />
+          <entry key="txt" value="30" />
+          <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1733" />
-          <entry key="Markdown" value="580" />
-          <entry key="PLAIN_TEXT" value="26" />
+          <entry key="JAVA" value="1821" />
+          <entry key="Markdown" value="599" />
+          <entry key="PLAIN_TEXT" value="30" />
+          <entry key="Properties" value="15" />
+          <entry key="XML" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -117,126 +174,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="169" column="5" lean-forward="true" selection-start-line="169" selection-start-column="5" selection-end-line="169" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/services/UserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/services/UserServiceImp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1924">
-              <caret line="89" column="36" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/mappers/UserMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="962">
-              <caret line="41" column="57" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/models/Student.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1066">
-              <caret line="51" selection-start-line="51" selection-end-line="51" />
-              <folding>
-                <element signature="e#878#879#0" expanded="true" />
-                <element signature="e#920#921#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="544">
+              <caret line="53" column="7" lean-forward="true" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/接口文档.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="533">
-                <caret line="209" column="1" lean-forward="true" selection-start-line="209" selection-start-column="1" selection-end-line="209" selection-end-column="1" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/App.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/models/Order.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="8" column="31" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="31" />
-              <folding>
-                <element signature="e#869#870#0" expanded="true" />
-                <element signature="e#903#904#0" expanded="true" />
-                <element signature="e#957#958#0" expanded="true" />
-                <element signature="e#1003#1004#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/models/Page.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
-              <caret line="11" column="26" selection-start-line="8" selection-start-column="4" selection-end-line="11" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1258#1259#0" expanded="true" />
-                <element signature="e#1285#1286#0" expanded="true" />
-                <element signature="e#1322#1323#0" expanded="true" />
-                <element signature="e#1354#1355#0" expanded="true" />
-              </folding>
+              <caret line="60" column="34" lean-forward="true" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -271,17 +221,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/mappers/StudentMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/Utilities/Pages.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/App.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/models/LoginHandlerInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/models/MyMvcConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/models/WebConfigurer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/config/LoginInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/config/WebConfigurer.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/models/OrderRecord.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/Utilities/Page.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/models/Page.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/config/LoginHandlerInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/Utilities/DataTool.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/接口.md" />
@@ -291,12 +238,15 @@
         <option value="$PROJECT_DIR$/src/test/java/HuaJuHomePage/AppTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/models/Order.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/services/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/services/UserServiceImp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/mappers/UserMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/models/Student.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/mappers/UserMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/接口文档.md" />
+        <option value="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/models/Page.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/HuJuHomePage/services/UserServiceImp.java" />
       </list>
     </option>
   </component>
@@ -314,7 +264,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="16" />
+    <option name="x" value="945" />
     <option name="width" value="973" />
     <option name="height" value="1033" />
   </component>
@@ -325,8 +275,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -376,15 +324,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="HuJuHomePage" type="462c0819:PsiDirectoryNode" />
-              <item name="mappers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HuaJuHomePage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HuaJuHomePage" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="HuJuHomePage" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -404,6 +343,13 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="HuJuHomePage" type="462c0819:PsiDirectoryNode" />
               <item name="Utilities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HuaJuHomePage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HuaJuHomePage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HuaJuHomePage" type="b2602c69:ProjectViewProjectNode" />
@@ -430,6 +376,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -441,7 +389,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573227750720" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573398104716" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -451,16 +399,19 @@
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\gitData\HuaJu\HuaJuHomePage\src\main\webApp" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\gitData\HuaJu\HuaJuHomePage\src\main\java\com\HuJuHomePage\controllers" />
+      <recent name="E:\gitData\HuaJu\HuaJuHomePage\src\main\java\com\HuJuHomePage\models" />
+      <recent name="E:\gitData\HuaJu\HuaJuHomePage\src\main\resources" />
+      <recent name="E:\IdeaProjects\HuaJuHomePage\src\main\resources\static" />
+      <recent name="E:\IdeaProjects\HuaJuHomePage\src\main" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.HuJuHomePage.controllers" />
+      <recent name="com.HuJuHomePage.models" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\IdeaProjects\HuaJuHomePage\src\main\resources\static" />
-      <recent name="E:\IdeaProjects\HuaJuHomePage\src\main" />
-      <recent name="E:\IdeaProjects\HuaJuHomePage\src\main\java" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\gitData\HuaJu\HuaJuHomePage\src\main\webApp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -537,6 +488,9 @@
       <workItem from="1573195154044" duration="376000" />
       <workItem from="1573210695460" duration="2209000" />
       <workItem from="1573227372209" duration="458000" />
+      <workItem from="1573286322537" duration="2854000" />
+      <workItem from="1573312902517" duration="31000" />
+      <workItem from="1573397365260" duration="815000" />
     </task>
     <task id="LOCAL-00001" summary="110621">
       <created>1573045660207</created>
@@ -615,7 +569,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573227761405</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="110916">
+      <created>1573289150093</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1573289150093</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -651,7 +612,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56181000" />
+    <option name="totallyTimeSpent" value="59881000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -664,8 +625,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19029851" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18496802" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -675,7 +637,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5043384" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5683297" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4099783" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -717,7 +679,8 @@
     <MESSAGE value="110814" />
     <MESSAGE value="110815" />
     <MESSAGE value="110820" />
-    <option name="LAST_COMMIT_MESSAGE" value="110820" />
+    <MESSAGE value="110916" />
+    <option name="LAST_COMMIT_MESSAGE" value="110916" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/HuaJuHomePage/App.java" />
@@ -730,21 +693,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/config/LoginInterceptor.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/mappers/StudentMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1040">
@@ -837,18 +786,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/services/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/services/UserServiceImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1924">
-          <caret line="89" column="36" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="36" />
+        <state relative-caret-position="364">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -857,8 +796,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/mappers/UserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="962">
-          <caret line="41" column="57" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
+        <state relative-caret-position="728">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -883,60 +822,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/models/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="31" />
-          <folding>
-            <element signature="e#869#870#0" expanded="true" />
-            <element signature="e#903#904#0" expanded="true" />
-            <element signature="e#957#958#0" expanded="true" />
-            <element signature="e#1003#1004#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/models/Page.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="11" column="26" selection-start-line="8" selection-start-column="4" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="91" column="18" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/models/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1066">
+          <caret line="75" column="5" lean-forward="true" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/services/UserServiceImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1014">
+          <caret line="43" column="27" lean-forward="true" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1258#1259#0" expanded="true" />
-            <element signature="e#1285#1286#0" expanded="true" />
-            <element signature="e#1322#1323#0" expanded="true" />
-            <element signature="e#1354#1355#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/接口文档.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="169" column="5" lean-forward="true" selection-start-line="169" selection-start-column="5" selection-end-line="169" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="286">
+          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="544">
+          <caret line="53" column="7" lean-forward="true" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/接口文档.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="533">
-            <caret line="209" column="1" lean-forward="true" selection-start-line="209" selection-start-column="1" selection-end-line="209" selection-end-column="1" />
+          <first_editor relative-caret-position="103">
+            <caret line="200" column="3" lean-forward="true" selection-start-line="200" selection-start-column="3" selection-end-line="200" selection-end-column="3" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/HuJuHomePage/controllers/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="60" column="34" lean-forward="true" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
         </state>
       </provider>
     </entry>

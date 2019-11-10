@@ -41,7 +41,6 @@ public class UserServiceImp implements UserService {
     @Override
     public Page findRecordOfOne(Integer currentPage, Integer pageSize, Student student) {
         int rows = userMapper.selectRowNum(student.getStudentId());
-        System.out.println("rows = " + rows);
         page.setRows(rows);
         page.setPageSize(pageSize);
         page.setPageNum(currentPage);
@@ -52,7 +51,6 @@ public class UserServiceImp implements UserService {
     @Override
     public Page findAllRecord(Integer currentPage, Integer pageSize) {
         int rows = userMapper.selectAllRowNum();
-        System.out.println("rows = " + rows);
         page.setRows(rows);
         page.setPageSize(pageSize);
         page.setPageNum(currentPage);
@@ -77,7 +75,6 @@ public class UserServiceImp implements UserService {
     @Override
     public Page findRecentOrder(Integer currentPage, Integer pageSize) {
         int rows = userMapper.selectRecentRowNum(DateTool.getCurrentStr());
-        System.out.println("rows = " + rows);
         page.setRows(rows);
         page.setPageSize(pageSize);
         page.setPageNum(currentPage);

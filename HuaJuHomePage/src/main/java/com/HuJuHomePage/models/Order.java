@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 public class Order {
     private int orderId;
     private int studentId;
-    private String  studentName;
+    private String studentName;
     private String startTime;
     private String endTime;
     private String theme;
@@ -56,7 +56,7 @@ public class Order {
     }
 
     public void setStartTime(String startTime) {
-        this.startTime = startTime;
+        this.startTime = startTime.split("\\.")[0];
     }
 
     public String getEndTime() {
@@ -64,7 +64,7 @@ public class Order {
     }
 
     public void setEndTime(String endTime) {
-        this.endTime = endTime;
+        this.endTime = endTime.split("\\.")[0];
     }
 
     public String getTheme() {

@@ -3,14 +3,17 @@ package com.HuJuHomePage.controllers;
 import com.HuJuHomePage.models.Student;
 import com.HuJuHomePage.models.User;
 import com.HuJuHomePage.services.UserService;
+import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.Map;
+
 @Controller
 @RequestMapping("loginPage")
 public class LoginController {
@@ -26,15 +29,16 @@ public class LoginController {
     /**
      * 登录功能
      * http://localhost:8080/HuaJu/loginPage/login
-     * @param name 姓名 String
-     * @param password 密码 String
+     * name 姓名 String
+     * password 密码 String
      * @return code : 0 登录失败，1 登录成功
      */
     @RequestMapping("/login")
     @ResponseBody
-    public Map<String,Integer> login(String name, String password, HttpSession session){
+    public Map<String,Integer> login(@RequestBody JSONObject param, HttpSession session){
         Map<String,Integer> returnMap = new HashMap<>();
-//        System.out.println(name + "============" + password);
+        String name = param.get("name").toString();
+        String password = param.get("password").toString();
         student = userService.login(name,password);
         returnMap.put("code",0);
         if (student != null){

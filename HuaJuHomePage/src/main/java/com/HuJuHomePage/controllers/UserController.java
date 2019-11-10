@@ -5,8 +5,10 @@ import com.HuJuHomePage.models.Page;
 import com.HuJuHomePage.models.Student;
 import com.HuJuHomePage.models.User;
 import com.HuJuHomePage.services.UserService;
+import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -36,8 +38,7 @@ public class UserController {
 
     @RequestMapping("/saveUser")
     @ResponseBody
-    public User saveUser(String name ,Integer age){
-        System.out.println(name + "=====" + age);
+    public User saveUser(String name , Integer age){
         user.setName(name);
         user.setAge(age);
         userService.saveUser(name,age);
@@ -54,16 +55,20 @@ public class UserController {
     /**
      * 提交预定
      * http://localhost:8080/HuaJu/orderPage/submitOrder
-     * @param startTime 开始时间 String
-     * @param endTime 结束时间 String
-     * @param theme 主题 String
-     * @param activityContent 活动内容 String
+     * startTime 开始时间 String
+     * endTime 结束时间 String
+     * theme 主题 String
+     * activityContent 活动内容 String
      * @return  code: -1 提交失败(系统异常) 0 不能预订 1 提交成功 2 预订冲突 int
      *          预订冲突时同时返回冲突订单：key = orderList  value = 冲突订单集合 List
      */
     @RequestMapping("/submitOrder")
     @ResponseBody
-    public Map<String,Object> submitOrder(String startTime,String endTime,String theme,String activityContent,HttpSession session){
+    public Map<String,Object> submitOrder(@RequestBody JSONObject param, HttpSession session){
+        String startTime = param.getString("startTime");
+        String endTime = param.getString("endTime");
+        String theme = param.getString("theme");
+        String activityContent = param.getString("activityContent");
         Map<String,Object> returnMap = new HashMap<>();
         student = (Student) session.getAttribute("loginUser");
         if (!userService.inRight(student,startTime,endTime)){
@@ -98,7 +103,7 @@ public class UserController {
      */
     @RequestMapping("/findRecentOrder")
     @ResponseBody
-    public Page findRecentOrder(Integer pageNum,Integer pageSize){
+    public Page findRecentOrder(Integer pageNum, Integer pageSize){
         return userService.findRecentOrder(pageNum,pageSize);
     }
 
@@ -112,7 +117,7 @@ public class UserController {
      */
     @RequestMapping("/findRecordOfOne")
     @ResponseBody
-    public Page findRecordOfOne(Integer pageNum,Integer pageSize, HttpSession session){
+    public Page findRecordOfOne(Integer pageNum, Integer pageSize, HttpSession session){
         student = (Student)session.getAttribute("loginUser");
         return userService.findRecordOfOne(pageNum,pageSize,student);
     }
@@ -126,7 +131,7 @@ public class UserController {
      */
     @RequestMapping("/findAllRecord")
     @ResponseBody
-    public Page findAllRecord(Integer pageNum,Integer pageSize){
+    public Page findAllRecord(Integer pageNum, Integer pageSize){
         return userService.findAllRecord(pageNum,pageSize);
     }
 

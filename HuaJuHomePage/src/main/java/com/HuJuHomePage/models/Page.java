@@ -78,4 +78,14 @@ public class Page {
     public void setData(List<Order> data) {
         this.data = data;
     }
+
+    @Override
+    public String toString() {
+        return "Page{" +
+                "data=" + data +
+                ", pageNum=" + pageNum +
+                ", pageSize=" + pageSize +
+                ", rows=" + rows +
+                '}';
+    }
 }

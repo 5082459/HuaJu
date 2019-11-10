@@ -40,6 +40,12 @@ h6 {
 	letter-spacing: 1px;
 	text-transform: uppercase;
 }
+#mainNav .navbar-nav>li.nav-item>span {
+	font-size: 12px;
+	font-weight: 800;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
 
 @media only screen and (min-width: 992px) {
 	#mainNav {
@@ -65,6 +71,10 @@ h6 {
 	#mainNav .navbar-nav>li.nav-item>a:focus,
 	#mainNav .navbar-nav>li.nav-item>a:hover {
 		color: rgba(255, 255, 255, 0.8);
+	}
+	#mainNav .navbar-nav>li.nav-item>span {
+		padding: 10px 20px;
+		color: #fff;
 	}
 }
 

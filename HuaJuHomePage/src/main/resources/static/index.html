@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>华为活动室预约系统</title>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/reservationPage.css">
+		<link rel="stylesheet" href="css/bootstrap-reboot.css">
+		<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/laydate.js"></script>
+		<script type="text/javascript" src="js/layer.js"></script>
+		<script type="text/javascript" src="js/clean-blog.js"></script>
+		<script type="text/javascript" src="js/jquery.serializejson.js"></script>
+		<style type="text/css">
+			html {
+				position: relative;
+				min-height: 100%;
+			}
+
+
+			body {
+				margin-bottom: 60px;
+				background: url(resources/image/bg.jpg);
+				width: 100%;
+				font-size: 20px;
+				color: #212529;
+			}
+
+			textarea {
+				resize: none;
+			}
+		</style>
+	</head>
+	<body style="">
+
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+			<div class="container">
+				<a class="navbar-brand d-none d-xl-block d-lg-block" href="index.html" style="width: 200px;"><img src="resources/image/logo.png"
+					 width="100%" alt=""></a>
+				<a class="navbar-brand d-xl-none d-lg-none" href="index.html">西安电子科技大学华为创新俱乐部</a>
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+				 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					Menu
+					<i class="fas fa-bars"></i>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="#">华俱概述</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">面试流程</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">活动室预约</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">图书借阅</a>
+						</li>
+					</ul>
+					<ul class="navbar-nav ml-auto" id="accountUl">
+						<li class="nav-item">
+							<a class="nav-link" href="login.html">登录</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<header class="masthead" style="background-image: url(resources/image/headerbg.jpg)">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-md-10 mx-auto">
+						<div class="site-heading">
+							<h1>活动室预约</h1>
+							<!-- <span class="subheading">A Blog Theme by Start Bootstrap</span> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+
+		<div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 d-none d-lg-block">
+						<div class="reservation-nav" style="margin-top: 50px;">
+							<ul class="nav nav-pills flex-column" role="tablist">
+								<li class="nav-item">
+									<a class="nav-link active" href="#reservationTab" data-toggle="pill" role="tab" aria-selected="true">我要预约</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#recordTab" data-toggle="pill" role="tab" aria-selected="false">全部预约记录</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#liveReservationTab" data-toggle="pill" role="tab" aria-selected="false">未过期预约</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#myReservationTab" data-toggle="pill" role="tab" aria-selected="false">我的预约</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#rulesTab" data-toggle="pill" role="tab" aria-selected="false">预约细则</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="d-block d-lg-none">
+						<div class="reservation-nav" style="margin-top: 50px;">
+							<ul class="nav nav-pills" role="tablist">
+								<li class="nav-item">
+									<a class="nav-link active" href="#reservationTab" data-toggle="pill" role="tab" aria-selected="true">我要预约</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#recordTab" data-toggle="pill" role="tab" aria-selected="false">全部预约记录</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#liveReservationTab" data-toggle="pill" role="tab" aria-selected="false">未过期预约</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#myReservationTab" data-toggle="pill" role="tab" aria-selected="false">我的预约</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#rulesTab" data-toggle="pill" role="tab" aria-selected="false">预约细则</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-9">
+						<div class="reservation-content tab-content">
+							<div class="tab-pane fade show active" id="reservationTab">
+								<h3>我的申请表</h3>
+								<div>
+									<form id="appForm" onsubmit="return false;">
+										<div class="container">
+											<div class="form-row">
+												<label for="appName" class="col-md-2 col-form-label">申请者姓名</label>
+												<div class="col-md-4"><input type="text" class="form-control" name="name" id="appName"></div>
+												<label for="appDepartment" class="col-md-2 col-form-label">部门</label>
+												<div class="col-md-4"><input type="text" class="form-control" name="department" id="appDepartment"></div>
+
+											</div>
+											<div class="form-row">
+												<label for="appPhone" class="col-md-2 col-form-label">手机号</label>
+												<div class="col-md-4"><input type="text" class="form-control" name="phone" id="appPhone"></div>
+												<label for="appWechat" class="col-md-2 col-form-label">微信号</label>
+												<div class="col-md-4"><input type="text" class="form-control" name="wechat" id="appWechat"></div>
+											</div>
+											<div class="form-row">
+												<label for="appTime" class="col-md-2 col-form-label">预约时间</label>
+												<div class="col"><input type="text" class="form-control" name="time" id="appTime"></div>
+											</div>
+											<div class="form-row">
+												<label for="appSubject" class="col-md-2 col-form-label">活动主题</label>
+												<div class="col"><input type="text" class="form-control" name="theme" id="appSubject"></div>
+											</div>
+											<div class="form-row">
+												<label for="appContent" class="col-md-2 col-form-label">活动内容</label>
+												<div class="col"><textarea class="form-control" name="activityContent" id="appContent" rows="3"></textarea></div>
+											</div>
+											<div style="text-align: center;"><button type="submit" class="btn btn-primary" id="appSubmit">提交申请</button></div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="recordTab">
+								<h3>全部预约记录</h3>
+								<table class="table table-striped" id="allReservationTable">
+									<thead>
+										<tr>
+											<td>序号</td>
+											<td>预约时间</td>
+											<td>申请人</td>
+											<td>查看申请表</td>
+										</tr>
+									</thead>
+									<tbody>
+									</tbody>
+								</table>
+								<div class="container-fluid">
+									<div class="row justify-content-between">
+										<div class="">每页 
+											<select class="form-control-sm" style="width: 50px;" id="allReservationPageSize">
+												<option value ="5">5</option>
+												<option value ="6">6</option>
+												<option value ="7">7</option>
+												<option value ="8">8</option>
+												<option value ="9">9</option>
+												<option value ="10">10</option>
+											</select> 条数据
+										</div>
+										<div id="allReservationTotalPage"></div>
+										<div class="">
+											<ul class="pagination">
+												<li class="page-item"><button class="page-link" id="allReservationPrevious">上一页</button></li>
+												<li class="page-item"><input class="form-control" type="text" style="width: 50px; height: 100%;" id="allReservationPageNum"></li>
+												<li class="page-item"><button class="page-link" id="allReservationNext">下一页</button></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="tab-pane fade" id="liveReservationTab">
+								<h3>未过期预约</h3>
+								<table class="table table-striped" id="liveReservationTable">
+									<thead>
+										<tr>
+											<td>序号</td>
+											<td>预约时间</td>
+											<td>申请人</td>
+											<td>查看申请表</td>
+										</tr>
+									</thead>
+									<tbody>
+									</tbody>
+								</table>
+								<div class="container-fluid">
+									<div class="row justify-content-between">
+										<div class="">每页 
+											<select class="form-control-sm" style="width: 50px;" id="liveReservationPageSize">
+												<option value ="5">5</option>
+												<option value ="6">6</option>
+												<option value ="7">7</option>
+												<option value ="8">8</option>
+												<option value ="9">9</option>
+												<option value ="10">10</option>
+											</select> 条数据
+										</div>
+										<div id="liveReservationTotalPage"></div>
+										<div class="">
+											<ul class="pagination">
+												<li class="page-item"><a class="page-link" id="liveReservationPrevious">上一页</a></li>
+												<li class="page-item"><input class="form-control" type="text" style="width: 50px; height: 100%;" id="liveReservationPageNum"></li>
+												<li class="page-item"><a class="page-link" id="liveReservationNext">下一页</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="tab-pane fade" id="myReservationTab">
+								<h3>我的预约</h3>
+								<table class="table table-striped" id="myReservationTable">
+									<thead>
+										<tr>
+											<td>序号</td>
+											<td>预约时间</td>
+											<td>申请人</td>
+											<td>查看申请表</td>
+										</tr>
+									</thead>
+									<tbody>
+									</tbody>
+								</table>
+								<div class="container-fluid">
+									<div class="row justify-content-between">
+										<div class="">每页 
+											<select class="form-control-sm" style="width: 50px;" id="myReservationPageSize">
+												<option value ="5">5</option>
+												<option value ="6">6</option>
+												<option value ="7">7</option>
+												<option value ="8">8</option>
+												<option value ="9">9</option>
+												<option value ="10">10</option>
+											</select> 条数据
+										</div>
+										<div id="myReservationTotalPage"></div>
+										<div class="">
+											<ul class="pagination">
+												<li class="page-item"><a class="page-link" id="myReservationPrevious">上一页</a></li>
+												<li class="page-item"><input class="form-control" type="text" style="width: 50px; height: 100%;" id="myReservationPageNum"></li>
+												<li class="page-item"><a class="page-link" id="myReservationNext">下一页</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="rulesTab">
+								<h3>预约细则</h3>
+								<ol>
+									<li>华俱活动室为97号楼正门（门口朝东）进去，正对楼梯口的房间。</li>
+									<li>组长可以预约当下时刻到未来14天的时间段。每次不超过6小时。</li>
+									<li>
+										组员可以预约当下时刻刀未来48小时的时间段；<br>
+										组员去之前找各自组组长要活动室钥匙；<br>
+										活动室一般不作为自习室，组队打游戏使用；<br>
+										组员每7天最多使用3次活动室，7天总时长不超过6小时。
+									</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title" id="appTableModalTitle">申请表</h4>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						</div>
+						<div class="modal-body">
+							<table style="width: 100%;">
+								<tr>
+									<td><label for="allAppName">申请者姓名</label></td>
+									<td><input type="text" class="form-control" name="name" id="allAppName" disabled value="李文祺"></td>
+									<td><label for="allAppDepartment">部门</label></td>
+									<td><input type="text" class="form-control" name="department" id="allAppDepartment" disabled value="无线二组"></td>
+								</tr>
+								<tr>
+									<td><label for="allAppPhone">手机号</label></td>
+									<td><input type="text" class="form-control" name="phone" id="allAppPhone" disabled value="13201696170"></td>
+									<td><label for="allAppWechat">微信号</label></td>
+									<td><input type="text" class="form-control" name="wechat" id="allAppWechat" disabled value="bullshitLeoLee"></td>
+								</tr>
+								<tr>
+									<td><label for="allAppTime">预约时间</label></td>
+									<td colspan="3"><input type="text" class="form-control" name="time" id="allAppTime" disabled value="10.24 18:00——10.24 19:00"></td>
+								</tr>
+								<tr>
+									<td><label for="allAppSubject">活动主题</label></td>
+									<td colspan="3"><input type="text" class="form-control" name="subject" id="allAppSubject" disabled value="打游戏"></td>
+								</tr>
+								<tr>
+									<td><label for="allAppContent">活动内容</label></td>
+									<td colspan="3"><textarea class="form-control" name="content" id="allAppContent" rows="3" disabled>聚一起打游戏</textarea></td>
+								</tr>
+							</table>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div style="height: 150px"></div>
+
+		<footer class="d-none d-lg-block">
+			<div class="footer">
+				<div class="container-fluid">
+					<div class="foot-block">
+						<div class="foot-title">关于我们</div>
+						<div class="foot-content">
+							<ul class="foot-ul">
+								<li><a href="#" class="foot-a">西电华为创新俱乐部</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="foot-block">
+						<div class="foot-title">部门介绍</div>
+						<div class="foot-content">
+							<ul class="foot-ul">
+								<li><a href="#" class="foot-a">无线通信一组</a></li>
+								<li><a href="#" class="foot-a">无线通信二组</a></li>
+								<li><a href="#" class="foot-a">固定带宽组</a></li>
+							</ul>
+							<ul class="foot-ul">
+								<li><a href="#" class="foot-a">云计算与海量数据组</a></li>
+								<li><a href="#" class="foot-a">网络媒体宣传组</a></li>
+								<li><a href="#" class="foot-a">新媒体中心</a></li>
+							</ul>
+							<ul class="foot-ul">
+								<li><a href="#" class="foot-a">秘书处</a></li>
+								<li><a href="#" class="foot-a">火种部</a></li>
+								<li><a href="#" class="foot-a">活力工作室</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="foot-block">
+						<div class="foot-title">友情链接</div>
+						<div class="foot-content">
+							<ul class="foot-ul">
+								<li><a href="#" class="foot-a">西电图书馆</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="qr-block d-none d-lg-block">
+						<img src="resources/image/QRCode.jpg" alt="">
+					</div>
+					<div class="qr-block d-none d-lg-block">
+						<img src="resources/image/programCode.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+	<script type="text/javascript">
+		
+		//获得登录用户
+		function getOnlineUser() {
+			$.ajax({
+				url: 'http://localhost:8080/HuaJu/orderPage/getOnlineUser',
+				type: 'GET',
+				dataType: 'json',
+				contentType: "application/json; charset=utf-8",
+				success: function(data) {
+					$('#accountUl li').remove();
+					$('#accountUl').append("<li class='nav-item'><span class='navbar-text'>欢迎您，" + data.name + "!</span></li>");
+					$('#accountUl').append("<li class='nav-item'><a class='nav-link' href='#' id='logout'>注销</a></li>");
+					return data;
+				}
+			})
+		}
+
+		//获得我的预约
+		function getMyReservation(pageNum, pageSize) {
+		    let returnData;
+			$("#myReservationTable tbody td").remove();
+			$.ajax({
+				url: 'http://localhost:8080/HuaJu/orderPage/findRecordOfOne',
+				type: 'GET',
+				dataType: 'json',
+				contentType: "application/json; charset=utf-8",
+                async: false,
+				data: {
+					pageNum: pageNum,
+					pageSize: pageSize
+				},
+				success: function(data) {
+                    console.log(data);
+					$.each(data.data, function(index, val) {
+						var tr = $("<tr></tr>");
+						tr.append("<td>" + val.orderId + "</td>");
+						tr.append("<td>" + val.startTime + "——" + val.endTime + "</td>");
+						tr.append("<td>" + val.studentName + "</td>");
+						tr.append(
+							"<td><button class='btn btn-success btn-xs' data-toggle='modal' data-target='#reservationModal' id='"+index+"myReservationButton'>查看申请表</button>"
+						);
+						$("#myReservationTable tbody").append(tr);
+					});
+					$("#myReservationTotalPage").text("总共" + data.totalPage + "页");
+                    returnData = data.data;
+				}
+			});
+            return returnData;
+		}
+		
+		//获得全部预约
+		function getAllReservation(pageNum, pageSize) {
+		    let returnData;
+			$("#allReservationTable tbody td").remove();
+			$.ajax({
+				url: 'http://localhost:8080/HuaJu/orderPage/findAllRecord',
+				type: 'GET',
+				dataType: 'json',
+				contentType: "application/json; charset=utf-8",
+                async: false,
+				data: {
+					pageNum: pageNum,
+					pageSize: pageSize
+				},
+				success: function(data) {
+                    console.log(data);
+					$.each(data.data, function(index, val) {
+						var tr = $("<tr></tr>");
+						tr.append("<td>" + val.orderId + "</td>");
+						tr.append("<td>" + val.startTime + "——" + val.endTime + "</td>");
+						tr.append("<td>" + val.studentName + "</td>");
+						tr.append(
+							"<td><button class='btn btn-success btn-xs' data-toggle='modal' data-target='#reservationModal' id='"+index+"allReservationButton'>查看申请表</button>"
+						);
+						$("#allReservationTable tbody").append(tr);
+					});
+					$("#allReservationTotalPage").text("总共" + data.totalPage + "页");
+                    returnData = data.data;
+				}
+			});
+            return returnData;
+		}
+		
+		//获得未过期预约
+		function getLiveReservation(pageNum, pageSize) {
+		    let returnData;
+			$("#liveReservationTable tbody td").remove();
+			$.ajax({
+				url: 'http://localhost:8080/HuaJu/orderPage/findRecentOrder',
+				type: 'GET',
+				dataType: 'json',
+				contentType: "application/json; charset=utf-8",
+                async: false,
+				data: {
+					pageNum: pageNum,
+					pageSize: pageSize
+				},
+				success: function(data) {
+				    console.log(data);
+					$.each(data.data, function(index, val) {
+						var tr = $("<tr></tr>");
+						tr.append("<td>" + val.orderId + "</td>");
+						tr.append("<td>" + val.startTime + "——" + val.endTime + "</td>");
+						tr.append("<td>" + val.studentName + "</td>");
+						tr.append(
+							"<td><button class='btn btn-success btn-xs' data-toggle='modal' data-target='#reservationModal' id='"+index+"liveReservationButton'>查看申请表</button>"
+						);
+						$("#liveReservationTable tbody").append(tr);
+					});
+					$("#liveReservationTotalPage").text("总共" + data.totalPage + "页");
+                    returnData = data.data;
+				}
+			});
+			return returnData;
+		}
+		
+		//获得用户信息
+		function getStudent(studentId){
+		    let returnData;
+			$.ajax({
+				url: 'http://localhost:8080/HuaJu/orderPage/getStudentById',
+				type: 'GET',
+				dataType: 'json',
+				contentType: "application/json; charset=utf-8",
+                async: false,
+				data: {studentId: studentId},
+				success: function(data){
+					returnData = data;
+				}
+			});
+			return returnData
+		}
+
+		//显示申请表
+		function showApplicationForm(list, index){
+			
+			let student = getStudent(list[index].studentId);
+			
+			$('#allAppName').prop('value', list[index].studentName);
+			$('#allAppDepartment').prop('value', student.section);
+			$('#allAppPhone').prop('value', student.phoneNum);
+			$('#allAppWechat').prop('value', student.weChatNum);
+			$('#allAppTime').prop('value', list[index].startTime + '——' + list[index].endTime);
+			$('#allAppSubject').prop('value', list[index].theme);
+			$('#allAppContent').prop('value', list[index].activityContent);
+		}
+
+		$(document).ready(function() {
+			
+			var myReservationList;
+            var liveReservationList;
+            var allReservationList;
+			
+			//初始化用户
+			let me = getOnlineUser();
+
+			//时间选择插件
+			laydate.render({
+				elem: '#appTime',
+				type: 'datetime',
+				range: true
+			});
+
+			//注销
+            $('#accountUl').on('click', "#logout", function(){
+                $.ajax({
+                    url: 'http://localhost:8080/HuaJu/loginPage/logout',
+                    type: 'POST',
+                    dataType: 'json',
+                    contentType: "application/json; charset=utf-8",
+                    success: function(data){
+                        switch(data.code){
+                            case -1: {layer.alert("系统异常!"); break;}
+                            case 1: {
+                                layer.msg("注销成功", {time: 2000}, function () {
+                                    window.location.href="login.html";
+                                });
+                            }
+                        }
+                    }
+                })
+            });
+
+			//我的预约初始化,默认第一页,一页5条数据
+			myReservationList = getMyReservation(1, 5);
+			console.log(myReservationList);
+			
+			//全部预约初始化,默认第一页,一页5条数据
+			allReservationList = getAllReservation(1, 5);
+			console.log(allReservationList);
+			
+			//未过期预约初始化,默认第一页,一页5条数据
+			liveReservationList = getLiveReservation(1, 5);
+			console.log(liveReservationList);
+
+			//申请表初始化
+			$("#reservationModal").on('show.bs.modal', function(event) {
+			    let selectedButton = $(event.relatedTarget);
+			    console.log(selectedButton.attr('id'));
+			    let index = parseInt(selectedButton.attr('id'));
+			    console.log(JSON.stringify({id: index}));
+				if(selectedButton.attr('id').search("my") != -1){
+					console.log("myReservationList");
+					showApplicationForm(myReservationList, index);
+				} else{
+					console.log("allReservationList");
+					showApplicationForm(allReservationList, index);
+				}
+					
+			});
+			
+			//提交预定
+			$("#appSubmit").click(function(event){
+				let formParam = $("#appForm").serializeJSON();
+				let param = {
+					startTime: formParam.time.substr(0, 19),
+					endTime: formParam.time.substr(22, 19),
+					theme: formParam.theme,
+					activityContent: formParam.activityContent
+				};
+				$.ajax({
+					url: 'http://localhost:8080/HuaJu/orderPage/submitOrder',
+					type: 'POST',
+					dataType: 'json',
+					contentType: "application/json; charset=utf-8",
+					data: JSON.stringify(param),
+					success: function(data){
+						switch(data.code){
+							case -1: {layer.alert("提交失败（系统异常）!"); break;}
+							case 0: {layer.alert("不能预定!"); break;}
+							case 1: {
+							    layer.msg("提交成功", {time: 2000}, function () {
+                                    location.reload();
+                                });
+							}
+							case 2: {layer.alert("预定冲突!"); break;}
+						}
+					}
+				})
+			});
+
+			let allReservationPage = 1;
+			let myReservationPage = 1;
+			let liveReservationPage = 1;
+			//分页
+            //改变页面容量
+			$("#allReservationPageSize").change(function(event) {
+				let pageSize = $(this).val();
+                allReservationList = getAllReservation(1, pageSize);
+			});
+			$("#myReservationPageSize").change(function(event) {
+				let pageSize = $(this).val();
+				myReservationList = getMyReservation(1, pageSize);
+			});
+			$("#liveReservationPageSize").change(function(event) {
+				let pageSize = $(this).val();
+				liveReservationList = getLiveReservation(1, pageSize);
+			});
+			//键入页数
+			$("#allReservationPageNum").change(function(event) {
+				let pageSize = $("#allReservationPageSize").val();
+                allReservationPage = $(this).val();
+                if (allReservationPage != "")
+                    allReservationList = getAllReservation(allReservationPage, pageSize);
+			});
+			$("#myReservationPageNum").change(function(event) {
+				let pageSize = $("#myReservationPageSize").val();
+                myReservationPage = $(this).val();
+                if (myReservationPage != "")
+				    myReservationList = getMyReservation(myReservationPage, pageSize);
+			});
+			$("#liveReservationPageNum").change(function(event) {
+				let pageSize = $("#liveReservationPageSize").val();
+                liveReservationPage = $(this).val();
+                if (liveReservationPage != "")
+				    liveReservationList = getLiveReservation(liveReservationPage, pageSize);
+			})
+            //上一页
+            $("#allReservationPrevious").click(function (event) {
+                let pageSize = $("#allReservationPageSize").val();
+                allReservationPage--;
+                allReservationList = getAllReservation(allReservationPage, pageSize);
+            });
+            $("#myReservationPrevious").click(function (event) {
+                let pageSize = $("#myReservationPageSize").val();
+                myReservationPage--;
+                myReservationList = getMyReservation(allReservationPage, pageSize);
+            });
+            $("#liveReservationPrevious").click(function (event) {
+                let pageSize = $("#liveReservationPageSize").val();
+                liveReservationPage--;
+                liveReservationList = getLiveReservation(allReservationPage, pageSize);
+            });
+            //下一页
+            $("#allReservationNext").click(function (event) {
+                let pageSize = $("#allReservationPageSize").val();
+                allReservationPage++;
+                allReservationList = getAllReservation(allReservationPage, pageSize);
+            });
+            $("#myReservationNext").click(function (event) {
+                let pageSize = $("#myReservationPageSize").val();
+                myReservationPage++;
+                myReservationList = getMyReservation(allReservationPage, pageSize);
+            });
+            $("#liveReservationNext").click(function (event) {
+                let pageSize = $("#liveReservationPageSize").val();
+                liveReservationPage++;
+                liveReservationList = getLiveReservation(allReservationPage, pageSize);
+            });
+		});
+	</script>
+</html>
