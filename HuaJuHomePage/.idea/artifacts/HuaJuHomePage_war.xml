@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="HuaJuHomePage:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/HuaJuHomePage_war</output-path>
+    <root id="archive" name="HuaJuHomePage_war.war">
+      <element id="artifact" artifact-name="HuaJuHomePage:war exploded" />
+    </root>
+  </artifact>
+</component>

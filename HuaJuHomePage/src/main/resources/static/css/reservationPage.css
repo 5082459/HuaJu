@@ -179,7 +179,9 @@ header.masthead .site-heading .subheading {
 	border-radius: 0.2rem;
 }
 
-
+.page-detail {
+    font-size: 12px;
+}
 
 .footer {
 	position: absolute;
