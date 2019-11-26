@@ -81,7 +81,6 @@ public class UserController {
             returnMap.put("orderList",orderList);
             return returnMap;
         }
-        System.out.println(student);
         order.setStudentId(student.getStudentId());
         order.setStudentName(student.getName());
         order.setStartTime(startTime);

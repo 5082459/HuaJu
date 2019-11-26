@@ -29,6 +29,7 @@ public class UserServiceImp implements UserService {
 
     @Override
     public Student login(String name, String password) {
+        System.out.println(name + "正在登陆");
         return userMapper.findStudent(name,password);
     }
 

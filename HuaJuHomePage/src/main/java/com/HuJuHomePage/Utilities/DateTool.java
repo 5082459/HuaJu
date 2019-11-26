@@ -29,7 +29,7 @@ public class DateTool {
             long toCurrent = (startDate.getTime() - currentDate.getTime())/(1000*60*60*24);
             long gap = (endDate.getTime() - startDate.getTime())/(1000*60*60);
             System.out.println("toCurrent = " + toCurrent + "  " + "gap = " + gap + " " + "dataLimit = " + dataLimit + " " + timeLimit);
-            if (toCurrent > dataLimit || gap > timeLimit){
+            if (toCurrent > dataLimit || gap > timeLimit|| startDate.before(currentDate)){
                 return false;
             }
         } catch (ParseException e) {

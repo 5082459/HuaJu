@@ -13,7 +13,7 @@ public class MyMvcConfig extends WebMvcConfigurerAdapter {
          * 这里的addPathPatterns("/**")为配置需要拦截的方法“/**”代表所有，而后excludePathPatterns("/user/toLogin")等方法为排除哪些方法不进行		 拦截
          */
         registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
-                .excludePathPatterns("/loginPage/login","/static/**");
+                .excludePathPatterns("/loginPage/login","/static/**","/orderPage/saveStudent");
         super.addInterceptors(registry);
     }
 
