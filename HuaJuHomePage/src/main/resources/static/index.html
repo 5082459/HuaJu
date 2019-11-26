@@ -282,13 +282,12 @@
 							<div class="tab-pane fade" id="rulesTab">
 								<h3>预约细则</h3>
 								<ol>
-									<li>华俱活动室为97号楼正门（门口朝东）进去，正对楼梯口的房间。</li>
-									<li>组长可以预约当下时刻到未来14天的时间段。每次不超过6小时。</li>
+									<li>华俱活动室在97号楼五楼，活动室门正对楼梯口。</li>
+									<li>组长可以预约未来14天内的时间段，每次预约不超过6小时。</li>
 									<li>
-										组员可以预约当下时刻刀未来48小时的时间段；<br>
-										组员去之前找各自组组长要活动室钥匙；<br>
-										活动室一般不作为自习室，组队打游戏使用；<br>
-										组员每7天最多使用3次活动室，7天总时长不超过6小时。
+										组员可以预约未来48小时内的时间段，每次预约不超过6小时。<br>
+										组员预约需要经过主席或组长的同意，并且到组长那取得活动室钥匙。<br>
+										活动室作为华俱人学习讨论之地，一般不作为自习室，或组队打游戏使用。
 									</li>
 								</ol>
 							</div>
@@ -396,7 +395,7 @@
 		function getOnlineUser() {
 		    let returnData;
 			$.ajax({
-				url: 'http://139.9.131.234:9090/HuaJu/orderPage/getOnlineUser',
+				url: 'http://localhost:9090/HuaJu/orderPage/getOnlineUser',
 				type: 'GET',
 				dataType: 'json',
 				contentType: "application/json; charset=utf-8",
@@ -416,7 +415,7 @@
 		    let returnData;
 			$("#myReservationTable tbody td").remove();
 			$.ajax({
-				url: 'http://139.9.131.234:9090/HuaJu/orderPage/findRecordOfOne',
+				url: 'http://localhost:9090/HuaJu/orderPage/findRecordOfOne',
 				type: 'GET',
 				dataType: 'json',
 				contentType: "application/json; charset=utf-8",
@@ -449,7 +448,7 @@
 		    let returnData;
 			$("#allReservationTable tbody td").remove();
 			$.ajax({
-				url: 'http://139.9.131.234:9090/HuaJu/orderPage/findAllRecord',
+				url: 'http://localhost:9090/HuaJu/orderPage/findAllRecord',
 				type: 'GET',
 				dataType: 'json',
 				contentType: "application/json; charset=utf-8",
@@ -482,7 +481,7 @@
 		    let returnData;
 			$("#liveReservationTable tbody td").remove();
 			$.ajax({
-				url: 'http://139.9.131.234:9090/HuaJu/orderPage/findRecentOrder',
+				url: 'http://localhost:9090/HuaJu/orderPage/findRecentOrder',
 				type: 'GET',
 				dataType: 'json',
 				contentType: "application/json; charset=utf-8",
@@ -514,7 +513,7 @@
 		function getStudent(studentId){
 		    let returnData;
 			$.ajax({
-				url: 'http://139.9.131.234:9090/HuaJu/orderPage/getStudentById',
+				url: 'http://localhost:9090/HuaJu/orderPage/getStudentById',
 				type: 'GET',
 				dataType: 'json',
 				contentType: "application/json; charset=utf-8",
@@ -575,7 +574,7 @@
 			//注销
             $('#accountUl').on('click', "#logout", function(){
                 $.ajax({
-                    url: 'http://139.9.131.234:9090/HuaJu/loginPage/logout',
+                    url: 'http://localhost:9090/HuaJu/loginPage/logout',
                     type: 'POST',
                     dataType: 'json',
                     contentType: "application/json; charset=utf-8",
@@ -629,7 +628,7 @@
 					activityContent: formParam.activityContent
 				};
 				$.ajax({
-					url: 'http://139.9.131.234:9090/HuaJu/orderPage/submitOrder',
+					url: 'http://localhost:9090/HuaJu/orderPage/submitOrder',
 					type: 'POST',
 					dataType: 'json',
 					contentType: "application/json; charset=utf-8",
